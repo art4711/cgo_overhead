@@ -1,4 +1,4 @@
-package overhead
+package cgo_overhead
 
 import (
 	"testing"
