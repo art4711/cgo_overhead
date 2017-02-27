@@ -3,6 +3,7 @@ package cgo_overhead
 // void f(void) { return; }
 import "C"
 
+//go:noinline
 func bar() {
 }
 

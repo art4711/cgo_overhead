@@ -11,12 +11,14 @@ This is to defeat the compiler. At the first attempt I did this the
 overhead of Go function calls was almost zero and that's because the
 compiler helpfully inlined everything which defeated the whole purpose
 of the benchmark. This is the best I can do, it's probably not
-perfectly accurate (the call to `bar` is probably inlined inside the
-func), but it shows us the magnitude(s) of the problem.
+perfectly accurate, but it shows us the magnitude(s) of the problem.
 
-## results ##
+## results (1.8) ##
+
+    BenchmarkCFuncall-4    	20000000	        72.2 ns/op
+    BenchmarkGoFuncall-4   	1000000000	         2.03 ns/op
+
+## old results (from 1.6) ##
 
     BenchmarkCFuncall-4 	10000000	       184 ns/op
     BenchmarkGoFuncall-4	1000000000	         2.00 ns/op
-
-No comment, the results speak for themselves.
